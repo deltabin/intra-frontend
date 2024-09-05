@@ -33,7 +33,7 @@ export default defineNuxtConfig({
 		globalAppMiddleware: {
 			isEnabled: true,
 		},
-		baseURL: `${process.env.API_BASE_URL}/api/`,
+		baseURL: `http://${process.env.API_BASE_URL}/api/`,
 
 		provider: {
 			type: 'local',

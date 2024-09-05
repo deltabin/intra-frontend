@@ -20,7 +20,7 @@ const uploadProfileImage = async () => {
 
 	try {
 		await $fetch(
-			`http://45.86.80.42:8000/api/v1/users/${data.value.user.id}/`,
+			`http://${useRuntimeConfig().public.API_BASE_URL}/api/v1/users/${data.value.user.id}/`,
 			{
 				method: 'PATCH',
 				body: formData,

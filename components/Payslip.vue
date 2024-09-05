@@ -23,7 +23,7 @@ const header = [
 
 const initialize = async () => {
   try {
-    const data = await $fetch<Payslip[]>(`http://45.86.80.42:8000/api/v1/payslip/?iin=${user.value.id_num}`);
+    const data = await $fetch<Payslip[]>(`http://${useRuntimeConfig().public.API_BASE_URL}/api/v1/payslip/?iin=${user.value.id_num}`);
     data.forEach((item: any) => {
       let formattedDate = moment(item.period).locale('ru').format('MMMM yyyy');
       item.period = formattedDate.charAt(0).toUpperCase() + formattedDate.slice(1);
