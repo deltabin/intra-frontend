@@ -22,6 +22,13 @@ export default defineNuxtConfig({
 	pinia: {
 		storesDirs: ['./store/**'],
 	},
+	runtimeConfig: {
+		// Make environment variables accessible here
+		public: {
+			API_BASE_URL: process.env.API_BASE_URL,
+			API_NLS_URL: process.env.API_NLS_URL,
+		},
+	},
 	auth: {
 		globalAppMiddleware: {
 			isEnabled: true,

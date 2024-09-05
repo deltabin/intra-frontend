@@ -9,7 +9,7 @@ const isDisabledMail = ref(false)
 
 const sendChangeEmailCorp = async () => {
   try {
-    await $fetch('http://nls-1c/HttpService/hs/NewHTTP/V1', {
+    await $fetch('http://79.143.20.160:3030/HttpService/hs/NewHTTP/V1', {
       method: 'POST',
       body: {
         iin_num: data.value.user.id_num,

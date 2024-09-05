@@ -2,6 +2,10 @@
 import UploadProfileImage from '~/components/UploadProfileImage.vue'
 
 const {data} = useAuth()
+
+useSeoMeta({
+  title: 'ISKER | Редактирование профиля',
+})
 </script>
 
 <template>

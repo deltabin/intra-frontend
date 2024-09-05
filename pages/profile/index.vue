@@ -4,6 +4,10 @@ const {data} = useAuth()
 
 console.log(data.value.user)
 
+useSeoMeta({
+  title: 'ISKER | Профиль пользователя',
+})
+
 </script>
 
 
